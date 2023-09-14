@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/estilos.css">
 </head>
 
 <body class="corpo">
     <div class="container">
-        <button class="container__btn">Cadastrar</button>
-        <button class="container__btn">Lista</button>
+        <a href="./cadastrar.php" class="container__btn">Cadastrar</a>
+        <a href="./cadastrar.php" class="container__btn">Lista</a>
     </div>
 
     <footer class="rodape">
