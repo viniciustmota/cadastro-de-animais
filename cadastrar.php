@@ -5,7 +5,7 @@ use Kreait\Firebase\Factory;
 
 $msg = ''; // Inicialize a mensagem de erro/vitória
 
-if (isset($_POST['codigo'])) {
+if (isset($_POST['nome'])) {
     try {
         $factory = (new Factory())->withDatabaseUri('https://cadastro-de-animais-ca5c8-default-rtdb.firebaseio.com/');
         $database = $factory->createDatabase();
@@ -14,7 +14,7 @@ if (isset($_POST['codigo'])) {
             'Nome' => $_POST['nome'],
             'Peso' => $_POST['peso']
         ];
-        $database->getReference('Animais/'.$_POST['codigo'])->set($novaPalavra);
+        $database->getReference('Animais/'.$_POST['nome'])->set($novaPalavra);
         $msg = 'Palavra adicionada com sucesso!';
     } catch (\Exception $e) {
         $msg = 'Erro ao adicionar a palavra: ' . $e->getMessage();
@@ -33,11 +33,11 @@ if (isset($_POST['codigo'])) {
 </head>
 
 <body>
-    <form name="cadastro" method="POST">
+    <form name="cadastro" method="POST" class="">
         <div class="container">
-            Imagem: <input type="text" name="imagem" id="imagem" value="">
-            Nome: <input type="text" name="nome" id="nome" value="">
-            Peso: <input type="text" name="peso" id="peso" value="">
+            Imagem: <input type="text" name="imagem" id="imagem">
+            Nome: <input type="text" name="nome" id="nome">
+            Peso: <input type="text" name="peso" id="peso">
             <input type="submit" value="Salvar">
             <a href="./index.php">voltar</a>
         </div>
