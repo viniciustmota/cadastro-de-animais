@@ -11,7 +11,7 @@
 <body class="corpo">
     <div class="container">
         <a href="./cadastrar.php" class="container__btn">Cadastrar</a>
-        <a href="./cadastrar.php" class="container__btn">Lista</a>
+        <a href="./listar.php" class="container__btn">Lista</a>
     </div>
 
     <footer class="rodape">
