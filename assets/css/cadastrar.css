@@ -1,0 +1,60 @@
+body{
+    gap: 24px;
+}
+
+.cadastrar__titulo{
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 32px 0 44px 0;
+}
+
+.container{
+    margin-bottom: 0;
+}
+
+/* Picture input */
+
+.picture__input{
+    display: none;
+}
+
+.picture{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    aspect-ratio: 16/9;
+    color: #aaa;
+    border: 2px dashed;
+    cursor: pointer;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
+    outline: 2px solid #fff;
+}
+
+.picture:hover{
+    color: #777;
+    background: #ccc;
+}
+
+.picture:active{
+    color: var(--cor-secundaria);
+}
+
+.picture:focus{
+    outline: 2px solid var(--cor-secundaria);
+}
+
+.picture__img{
+    max-width: 100%;
+}
+
+.picture__input-manda-url{
+    display: none;
+}
+
+.container__btn{
+    padding: 8px;
+    font-size: 24px;
+}

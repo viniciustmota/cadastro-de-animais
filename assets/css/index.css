@@ -1,0 +1,31 @@
+.corpo {
+  background-image: url(../img/bg-animais.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+    .corpo{
+      background-image: url('');
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+    }
+    .animais__imagem{
+      display: block;
+      height: calc(100vh - 40px);
+      margin-left:32px;
+    }
+  
+    .container{
+      margin:0 32px 0 0;
+      width: 80%;
+    }
+  
+    .rodape{
+      grid-row: 2;
+      grid-column: 1 / span 2;
+    }
+  }

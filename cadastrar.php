@@ -30,20 +30,33 @@ if (isset($_POST['nome'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar</title>
     <link rel="stylesheet" href="./assets/css/estilos.css">
+    <link rel="stylesheet" href="./assets/css/cadastrar.css">
 </head>
 
-<body>
-    <form name="cadastro" method="POST" class="">
+<body class="corpo">
+    <h1 class="cadastrar__titulo">Adicione um animal</h1>
+    <form name="cadastro" method="POST" class="formulario">
         <div class="container">
-            Imagem: <input type="text" name="imagem" id="imagem">
+            <label tabindex="0" class="picture">
+                <input type="file" accept="image/*" class="picture__input" id="imagem">
+                <input type="text" name="imagem" class="picture__input-manda-url">
+                <span class="picture__image">
+                    <img src="./assets/img/Upload.png" class="picture__img">
+                </span>
+            </label>
             Nome: <input type="text" name="nome" id="nome">
-            Peso: <input type="text" name="peso" id="peso">
-            <input type="submit" value="Salvar">
-            <a href="./index.php">voltar</a>
+            Peso: <input type="number" name="peso" id="peso" maxlength="7" placeholder="Colocar peso em Kg">
+            <input type="submit" value="Salvar" class="container__btn">
+            <a href="./index.php" class="container__btn">voltar</a>
         </div>
 
     </form>
     <p><?php echo $msg; ?></p> <!-- Exibe a mensagem de erro ou sucesso -->
+    <footer class="rodape">
+        <p class="rodape__descricao">Vinicius & Marcio</p>
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
