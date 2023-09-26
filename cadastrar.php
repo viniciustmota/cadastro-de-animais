@@ -39,13 +39,13 @@ if (isset($_POST['nome'])) {
         <div class="container">
             <label tabindex="0" class="picture">
                 <input type="file" accept="image/*" class="picture__input" id="imagem">
-                <input type="text" name="imagem" class="picture__input-manda-url">
+                <input type="text" name="imagem" class="picture__input-manda-url" required>
                 <span class="picture__image">
                     <img src="./assets/img/Upload.png" class="picture__img">
                 </span>
             </label>
-            Nome: <input type="text" name="nome" id="nome">
-            Peso: <input type="number" name="peso" id="peso" maxlength="7" placeholder="Colocar peso em Kg">
+            Nome: <input type="text" name="nome" id="nome" required>
+            Peso: <input type="text" name="peso" id="peso"  maxlength="6" placeholder="Colocar peso em Kg" required>
             <input type="submit" value="Salvar" class="container__btn">
             <a href="./index.php" class="container__btn">voltar</a>
         </div>

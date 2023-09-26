@@ -9,6 +9,7 @@
     --cor-secundaria:#000;
     --cor-terciaria: #cccccc
 }
+
 body{
   height: 100vh;
   overflow: hidden;
